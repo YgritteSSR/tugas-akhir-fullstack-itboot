@@ -28,34 +28,43 @@ Fitur utama: autentikasi user (login/register) dan CRUD item.
 ## 🚀 Cara Menjalankan
 
 ### 1. Backend
-```bash
+```
 cd backend
 npm install 
+```
+---
 
 ### buat file .env dengan isi:
+```
 # Database
 DB_HOST=localhost
 DB_USER=postgres
 DB_PASSWORD=12345
 DB_NAME=pos_itcamp
 DB_PORT=5432
+```
 
-# Server
+### Server
+```
 PORT=3000
-
-# CORS
+```
+### CORS
+```
 CORS_ORIGIN=http://localhost:5173
-
-# JWT
+```
+### JWT
+```
 JWT_SECRET=8107e88c663d0917fa20e892719711a108b4661f3a6d6456ef79feeecbaa3e54
 JWT_EXPIRES=1h
-
+```
 ###jalankan server
+```
 npm run dev #untuk frontend
 node src/index.js #backend
-
+```
 ###CRUD 
 ### Bisa diakses melalui akun admin yang sudah ada saat menjalankan server
+```
 Endpoint API (contoh)
 POST /auth/register → Registrasi user baru
 
@@ -68,8 +77,9 @@ POST /items → Tambah item baru (butuh token)
 PUT /items/:id → Edit item (butuh token)
 
 DELETE /items/:id → Hapus item (butuh token)
-
+```
 ###api login
+```
 POST /auth/login
 Request:
 {
@@ -81,8 +91,9 @@ Response:
 {
   "token": "8107e88c663d0917fa20e892719711a108b4661f3a6d6456ef79feeecbaa3e54"
 }
-
+```
 ### Database
+```
 CREATE TABLE IF NOT EXISTS users (
 	id SERIAL PRIMARY KEY,
 	username VARCHAR(100) NOT NULL ,
@@ -107,7 +118,7 @@ CREATE TABLE IF NOT EXISTS activity_logs (
   action VARCHAR(100) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 
 ###Teknologi
