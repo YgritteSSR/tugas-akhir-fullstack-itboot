@@ -27,10 +27,13 @@ Fitur utama: autentikasi user (login/register) dan CRUD item.
 
 ## 🚀 Cara Menjalankan
 
-### 1. Backend
+### jalankan server
 ```
-cd backend
-npm install 
+cd/backend
+node src/index.js #backend
+cd/frontend
+npm run dev #untuk frontend
+o+enter untuk lgsg membuka browser
 ```
 ---
 
@@ -57,12 +60,7 @@ CORS_ORIGIN=http://localhost:5173
 JWT_SECRET=8107e88c663d0917fa20e892719711a108b4661f3a6d6456ef79feeecbaa3e54
 JWT_EXPIRES=1h
 ```
-###jalankan server
-```
-npm run dev #untuk frontend
-node src/index.js #backend
-```
-###CRUD 
+### CRUD 
 ### Bisa diakses melalui akun admin yang sudah ada saat menjalankan server
 ```
 Endpoint API (contoh)
