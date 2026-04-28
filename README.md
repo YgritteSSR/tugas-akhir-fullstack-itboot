@@ -84,6 +84,33 @@ Response:
   "token": "8107e88c663d0917fa20e892719711a108b4661f3a6d6456ef79feeecbaa3e54"
 }
 
+### Database
+CREATE TABLE IF NOT EXISTS users (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(100) NOT NULL ,
+	email VARCHAR(100) NOT NULL UNIQUE,
+	password TEXT NOT NULL,
+	role VARCHAR (20) DEFAULT 'user',
+	created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS items (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  description TEXT,
+  created_by VARCHAR(100),  
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS activity_logs (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id),
+  action VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 
 ###Teknologi
 Backend: Node.js, ExpressJS, PostgreSQL, JWT, Bcrypt
