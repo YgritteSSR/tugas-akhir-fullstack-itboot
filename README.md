@@ -1,5 +1,3 @@
-# tugas-akhir-fullstack-itboot
-# tugas-akhir-fullstack-itboot
 # Tugas Akhir Fullstack IT_BOOT
 
 Aplikasi fullstack berbasis **React (frontend)** dan **ExpressJS + PostgreSQL (backend)**.  
